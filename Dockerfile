@@ -40,37 +40,6 @@ RUN \
       && rm -rf boost_1_66_0
 
 RUN \
-      git clone --depth=1 "https://github.com/alanxz/rabbitmq-c" \
-      && cd rabbitmq-c \
-      && mkdir build && cd build \
-      && cmake \
-      -DCMAKE_INSTALL_PREFIX=/usr/local \
-      -DCMAKE_INSTALL_LIBDIR=lib \
-      -DBUILD_SHARED_LIBS=ON \
-      -DBUILD_STATIC_LIBS=OFF \
-      -DBUILD_TESTS=OFF \
-      -DBUILD_TOOLS=OFF \
-      -DBUILD_TOOLS_DOCS=OFF \
-      -DENABLE_SSL_SUPPORT=OFF \
-      -DBUILD_EXAMPLES=OFF \
-      .. \
-      && cmake --build . --target install -- -j 10 \
-      && cd ../.. \
-      && rm -rf rabbitmq-c
-
-RUN \
-      git clone --depth=1 "https://github.com/alanxz/SimpleAmqpClient" \
-      && cd SimpleAmqpClient \
-      && mkdir build && cd build \
-      && cmake \
-      -DCMAKE_INSTALL_PREFIX=/usr/local \
-      -DENABLE_SSL_SUPPORT=OFF \
-      .. \
-      && cmake --build . --target install -- -j 10 \
-      && cd ../.. \
-      && rm -rf SimpleAmqpClient
-
-RUN \
       curl -SL "https://raw.githubusercontent.com/nlohmann/json/master/single_include/nlohmann/json.hpp" \
       -o json.hpp \
       && mv json.hpp /usr/local/include

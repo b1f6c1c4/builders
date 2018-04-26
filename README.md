@@ -16,8 +16,6 @@ Docker image for building C++ programs.
     - boost.chrono
     - boost.system
     - boost.program\_options
-- [alanxz/rabbitmq-c](https://github.com/alanxz/rabbitmq-c)
-- [alanxz/SimpleAmqpClient](https://github.com/alanxz/SimpleAmqpClient)
 - [nlohmann/json](https://raw.githubusercontent.com/nlohmann/json/master/single_include/nlohmann/json.hpp)
 - [gabime/spdlog](https://github.com/gabime/spdlog)
 - [Yelp/MOE](https://github.com/Yelp/MOE)

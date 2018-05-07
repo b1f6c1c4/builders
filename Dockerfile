@@ -10,3 +10,8 @@ RUN \
         && echo 'libraryDependencies += "org.apache.flink" % "flink-streaming-scala_2.11" % "1.4.2"' >> build.sbt
 
 RUN sbt compile
+
+RUN \
+        echo 'libraryDependencies += "org.apache.flink" % "flink-connector-rabbitmq_2.11" % "1.4.2"' >> build.sbt
+
+RUN sbt compile
